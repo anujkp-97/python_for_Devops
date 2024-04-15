@@ -1,28 +1,28 @@
+import sys
 
-n1=2
-n2=4
+#This program not working check it 
 
-def add():
+def add(n1, n2):
     result = n1+n2
-    print(result)
+    return result
 
-def sub():
+def sub(n1, n2):
     result = n1-n2
-    if(result>0):
-        print(result)
-    else:
-        print(result)
+    return result
 
-def mul():
+def mul(n1, n2):
     result = n1*n2
-    print(result)
+    return result
 
-def div():
+def div(n1, n2):
     result = n1/n2
-    print(result)
+    return result
 
 
-add()
-sub()
-mul()
-div()
+n1 = sys.argv[1]
+operation = sys.argv[2]
+n2 = sys.argv[3]
+
+if operation == "add":
+    output =add(num1, num2)
+    print(output)
