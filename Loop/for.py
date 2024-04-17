@@ -2,10 +2,11 @@
 #     print("anuj",i)
 
 #with lists
-number=[12,14,11,5,3,21,44,56]
-for num in number:
-    if num%2==0:
-        print(num)
+# number=[12,14,11,5,3,21,44,56]
+# for num in number:
+#     if num%2==0:
+#         print(num)
+
 
 
 
