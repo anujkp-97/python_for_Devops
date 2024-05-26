@@ -13,3 +13,10 @@ num =[1,2,4,2,1,5,3,2,5,6,2,1]
 num.sort()
 print(num)
 print(student_list[0:3])
+
+student_list.append("Akhilesh")
+print(student_list)
+
+# student_tuple.append("Akhilesh")
+# print(student_tuple)
+# Tuple is immutable while the list is mutable []
