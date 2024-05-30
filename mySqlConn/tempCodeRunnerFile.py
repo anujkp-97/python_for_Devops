@@ -1,1 +1,1 @@
-print(q)
+db.update(newName, newPhone, uid)

@@ -21,6 +21,7 @@ class Database:
         cur.execute(q)
         self.con.commit()
         print("Inserted successfully!")
+        print()
     
     #fetch data
     def get_data(self):
@@ -29,10 +30,26 @@ class Database:
         cur.execute(q)
         res = cur.fetchall()
         for x in res:
-            print(x)
-        
-
-
-db = Database()
-# db.insert_data(2, 'Ankit', '7078427126')
-db.get_data()
+            print("UserId: ", x[0])
+            print("UserName: ", x[1])
+            print("Phone: ", x[2])
+            print()
+    
+    #delete
+    def delete_user(self, userId):
+         cur = self.con.cursor()
+         q = "delete from user where userId = {}".format(userId)
+         cur.execute(q)
+         print("Deleted")
+         self.con.commit()
+         print()
+    
+    #update
+    def update(self, userId, newName, newPhone):
+        cur = self.con.cursor()
+        q = "update user set user_Name= '{}', phone='{}' where userId = {}".format(newName, newPhone, userId)
+        print(q)
+        cur.execute(q)
+        self.con.commit()
+        print("Updated")
+        print()
